@@ -20,17 +20,7 @@ class App extends React.Component {
     };
   }
 
-  // //asynchronous function that fetches JSON content and populates the quotes array
-  // const makeRequest = async () => {
-  // const responseJSON = await fetch(
-  //   "https://cdn.jsdelivr.net/gh/morsewall/jsondb@master/db.json"
-  // );
-  // const responseObject = await responseJSON.json();
-  // quotes = responseObject.quotes;
-  // };
-
   //asynchronous function that fetches JSON content and populates the quotes array
-
   async componentDidMount() {
     const responseJSON = await fetch(
       "https://cdn.jsdelivr.net/gh/morsewall/jsondb@master/db.json"
