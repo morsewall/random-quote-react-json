@@ -37,7 +37,6 @@ class App extends React.Component {
     );
     const responseObject = await responseJSON.json();
     quotes = responseObject.quotes;
-    };
   } 
 
   random(array) {
