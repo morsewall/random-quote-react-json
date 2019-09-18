@@ -1,7 +1,7 @@
 "use strict";
 
-// array to be populated with JSON content
-const quotes;
+//array to be populated with JSON content
+let quotes;
 
 //defining the stateful component. This creates the JavaScript class App that extends the React.Component class. With this, App can now access React features.
 class App extends React.Component {
@@ -27,7 +27,7 @@ class App extends React.Component {
     );
     const responseObject = await responseJSON.json();
     quotes = responseObject.quotes;
-  } 
+  }
 
   random(array) {
     return Math.floor(Math.random() * array.length);
