@@ -13,20 +13,25 @@ class App extends React.Component {
     this.chosenRandomQuoteToState = this.chosenRandomQuoteToState.bind(this);
     //selecting a random quote from the array
     let quote = this.randomQuoteFunction(quotes);
-    //defining the component initial state, allowing the app to display any part of it in the UI that is rendered (more on rendering further down).
+    //defining the component initial state. Initializing state.
     this.state = {
-      quoteTextChosen: quote.quoteText,
-      quoteAuthorChosen: quote.quoteAuthor
+      quoteTextChosen: "",
+      quoteAuthorChosen: ""
     };
   }
 
-  //asynchronous function that fetches JSON content and populates the quotes array
+  //asynchronous function that fetches JSON content, populates the quotes array and updates state with a quote (following the fetch being complete)
   async componentDidMount() {
     const responseJSON = await fetch(
       "https://cdn.jsdelivr.net/gh/morsewall/jsondb@master/db.json"
     );
     const responseObject = await responseJSON.json();
     quotes = responseObject.quotes;
+    let quote = this.randomQuoteFunction(quotes);
+    this.setState({
+      quoteTextChosen: quote.quoteText,
+      quoteAuthorChosen: quote.quoteAuthor
+    });
   }
 
   random(array) {
