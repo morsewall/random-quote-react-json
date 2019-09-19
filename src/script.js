@@ -11,8 +11,6 @@ class App extends React.Component {
     this.random = this.random.bind(this);
     this.randomQuoteFunction = this.randomQuoteFunction.bind(this);
     this.chosenRandomQuoteToState = this.chosenRandomQuoteToState.bind(this);
-    //selecting a random quote from the array
-    let quote = this.randomQuoteFunction(quotes);
     //defining the component initial state. Initializing state.
     this.state = {
       quoteTextChosen: "",
