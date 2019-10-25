@@ -1,6 +1,6 @@
 "use strict";
 
-//array to be populated with JSON content
+//defining variable to be populated with JSON content
 let quotes;
 
 //defining the stateful component. This creates the JavaScript class App that extends the React.Component class. With this, App can now access React features.
