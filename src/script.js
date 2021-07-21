@@ -112,7 +112,7 @@ class App extends React.Component {
               </a>
             </li>
           </ul>
-          <span>© 2019 Developed by Pat Eskinasy. All Rights Reserved.</span>
+          <span>© Developed by Pat Eskinasy. All Rights Reserved.</span>
         </footer>
       </React.Fragment>
     );
