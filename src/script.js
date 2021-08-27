@@ -1,5 +1,3 @@
-"use strict";
-
 //defining variable to be populated with JSON content
 let quotes;
 
